@@ -1,5 +1,12 @@
-data_gery_csv=read.csv("C:/Users/62895/Documents/Prak statistika/daftar siswa prak statistika 30 orang.csv/prak")
+data_gery_csv=read.csv("C:/Users/adhig/Documents/Statistika/data_gery.csv")
+
+View(data_gery_csv)
+mean(data_gery_csv$Tinggi.Badan)
+str(data_gery_csv)
 
 install.packages("xlsx")
 library("xlsx")
-data_gery_xlsx=read.xlsx("C:/Users/62895/Documents/Prak statistika/daftar siswa prak statistika 30 orang.xlsx", 1)
+
+data_gery_xlsx=read.xlsx("C:/Users/adhig/Documents/Statistika/data_gery.xlsx", 1
+                         
+   
