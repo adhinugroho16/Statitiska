@@ -1,0 +1,34 @@
+data_gery=read.delim("clipboard")
+View(data_gery)
+
+gery<- data_gery[4]
+View(data_gery)
+
+gery$tinggi.badan <- ifelse(gery$tinggi.badan > 160, c("tinggi"), c("pendek"))
+View(gery)
+
+gery$Jurusan <-c("infor21")
+View(gery)
+	
+gery$Fakultas <-c("FTI")
+View(gery)
+
+gery$Fakultas<-NULL
+View(gery)
+
+data_gery.kolom1dan2 <- data_gery[,1:2]
+View(data_gery.kolom1dan2)
+	
+data_gery.kolom3dan4 <- data_gery[,3:4]
+View(data_gery.kolom3dan4)
+	
+data_gery.kolom1sd4<-cbind(data_gery.kolom1dan2, data_gery.kolom3dan4)
+View(data_gery.kolom1sd4)
+
+data_gery.baris1sd5 <- data_gery[1:5,]
+data_gery.baris25sd30 <- data_gery[25:30,]
+data_gery1sd30 <-rbind(data_gery.baris1sd5, data_gery.baris25sd30)
+View(data_gery1sd30)
+
+data_gery.sort<-data_gery[order(data_gery$waktu.perjalanan),]
+View(data_gery.sort)
