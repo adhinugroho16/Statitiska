@@ -1,0 +1,5 @@
+gery=read.delim("clipboard")
+View(gery)
+str(gery)
+mean(gery$Penghasilan)
+t.test(gery$Penghasilan, mu=14500)
