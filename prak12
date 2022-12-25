@@ -1,0 +1,16 @@
+df_nama=read.delim("clipboard")
+head(df_nama)
+model_reg=lm(df_nama$y~df_nama$x)
+summary(model_reg)
+
+
+df_gery=read.delim("clipboard")
+df_gery$brick_dummy <- ifelse(df_gery$Brick == "Yes", 1,0)
+df_gery$N_dummy1 <- ifelse(df_gery$Neighborhood =="West", 1,0)
+df_gery$N_dummy2 <- ifelse(df_gery$Neighborhood =="North", 1,0)
+model =lm(df_gery$Price~df_gery$SqFt+df_gery$Bedrooms+df_gery$Bathrooms+df_gery$brick_dummy+df_gery$N_dummy1+df_gery$N_dummy2)
+summary(model)
+
+
+by(df_gery$Price, df_gery$Neighborhood, mean)
+by(df_gery$Price, df_gery$Brick, mean)
